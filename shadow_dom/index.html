@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <template id="control">
+    <style type="text/css">
+      :host(:hover) {
+        border-width: 6px !important;
+      }
+      h1 {
+        text-shadow: 1px 1px 1px #888;
+      }
+    </style>
+    <section>
+      <h1><content></content></h1>
+    </section>
+  </template>
+
+  <style type="text/css">
+    .outta-control {
+      border: 3px dashed #CCC;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+    .outta-control::shadow h1 {
+      color: #CCF;
+    }
+  </style>
+</head>
+<body>
+  <div class="outta-control">
+    <i>Hey</i>
+  </div>
+
+  <script type="application/javascript">
+    var shadow = document.querySelector(".outta-control").createShadowRoot();
+    var template = document.querySelector("#control");
+    var clone = document.importNode(template.content, true);
+    shadow.appendChild(clone);
+  </script>
+</body>
+</html>

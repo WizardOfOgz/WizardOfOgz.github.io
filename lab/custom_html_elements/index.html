@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+    ogz-element {
+      border: 3px dashed #CCC;
+      border-radius: 10px;
+      padding: 2px;
+      text-align: center;
+    }
+    ogz-element::after {
+      content: "Ogz Element";
+      color: #335;
+    }
+    p {
+      background-color: #FCC;
+      line-height: 1rem;
+    }
+    p ogz-element::after {
+      content: "Ogz Element (nested in P)";
+    }
+    [is=mega-button] {
+      background-color: #AEA;
+    }
+  </style>
+</head>
+<body>
+  <h1>Custom HTML Element</h1>
+  <p id="paragraph"></p>
+
+  <ogz-element>Directly in the markup</ogz-element>
+
+  <mega-button>Yeah!</mega-button>
+  <button is="mega-button">Yeah!</button>
+
+  <script type="application/javascript">
+    var OgzElement = document.registerElement('ogz-element');
+    document.body.appendChild(new OgzElement());
+    document.getElementById("paragraph").appendChild(new OgzElement());
+
+    var MegaButton = document.registerElement('mega-button', { prototype: HTMLButtonElement.prototype, extends: "button" });
+
+  </script>
+</body>
+</html>
