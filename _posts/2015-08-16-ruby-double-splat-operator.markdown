@@ -2,7 +2,7 @@
 layout: post
 title:  "Ruby Double-Splat Operator (**)"
 date:   2015-10-02 17:42:29
-categories: jekyll update
+categories: ruby
 ---
 The double-splat (**) was added to Ruby back when version 2.0 was released, but it seems to have
 gained very little since then. Perhaps it was simply overshadowed by the more-heralded features
@@ -49,7 +49,7 @@ Here is the listing from above, modified to now use the double-splat.
 
 {% highlight ruby %}
 def form(*resources, parent: nil, **options)
-  FormPresenter.new(resources, **options, legend: "#{ parent.name } - Licenses")
+  FormPresenter.new(resources, **options, legend: "#{ parent.name } - Positions")
 end
 {% endhighlight %}
 
