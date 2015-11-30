@@ -5,9 +5,9 @@ date:   2015-10-02 17:42:29
 categories: ruby
 ---
 The double-splat (**) was added to Ruby back when version 2.0 was released, but it seems to have
-gained very little since then. Perhaps it was simply overshadowed by the more-heralded features
-like lazy enumerators, keyword arguments and Module#prepend, which also arrived in the same
-version of Ruby. However, the double-splat is a very powerful little feature which can work
+gained very little attention since then. Perhaps it was simply overshadowed by the more-heralded
+features like lazy enumerators, keyword arguments and Module#prepend, which also arrived in the
+same version of Ruby. However, the double-splat is a very powerful little feature which can work
 wonders in tidying up your code.
 
 Simply put, the double-splat is to Hashes what the splat (*) is to Arrays. It picks up trailing
